@@ -15,6 +15,23 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <SplitView DisplayMode="CompactInline"
+               OpenPaneLength="100"
+               IsPaneOpen="True">
+        <SplitView.Pane>
+            <ListBox ItemsSource="{Binding ContentPages}"
+                     SelectedItem="{Binding CurrentPage}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate x:DataType="vm:ContentViewModelBase">
+                        <TextBlock Text="{Binding DisplayName}"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </SplitView.Pane>
+
+        <SplitView.Content>
+            <TransitioningContentControl Content="{Binding CurrentPage}"/>
+        </SplitView.Content>
+    </SplitView>
 
 </Window>

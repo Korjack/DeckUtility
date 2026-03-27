@@ -1,0 +1,35 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:DeckUtility.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="DeckUtility.Views.HomeView"
+             x:DataType="vm:HomeViewModel"
+             Padding="10">
+    <Design.DataContext>
+        <vm:HomeViewModel />
+    </Design.DataContext>
+    <StackPanel>
+        <Border BorderBrush="Black"
+                BorderThickness="2"
+                CornerRadius="8"
+                Height="100"
+                Padding="5">
+            <StackPanel Orientation="Horizontal">
+                
+                <Border BorderBrush="DarkGray"
+                        BorderThickness="1"
+                        CornerRadius="8"
+                        Padding="5">
+                    <StackPanel HorizontalAlignment="Center"
+                                VerticalAlignment="Center">
+                        <Image Height="40" Source="../Assets/avalonia-logo.ico"/>
+                        <TextBlock Text="GameScope"
+                                   FontWeight="SemiBold"/>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </Border>
+    </StackPanel>
+</UserControl>
