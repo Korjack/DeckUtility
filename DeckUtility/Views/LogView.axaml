@@ -11,8 +11,15 @@
     <Design.DataContext>
         <vm:LogViewModel/>
     </Design.DataContext>
-    <Panel>
-        <TextBlock Text="{Binding LogContent}" 
-                   Foreground="White"/>
-    </Panel>
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <TextBox Text="{Binding LogContent}" 
+                 IsReadOnly="True"
+                 AcceptsReturn="True"
+                 TextWrapping="Wrap"
+                 FontFamily="Cascadia Code,Consolas,Monospace"
+                 Foreground="White"
+                 Background="Transparent"
+                 BorderThickness="0"/>
+    </ScrollViewer>
+
 </UserControl>

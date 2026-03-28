@@ -10,14 +10,13 @@
     <Design.DataContext>
         <vm:HomeViewModel />
     </Design.DataContext>
-    <StackPanel>
+    <StackPanel Spacing="10">
         <Border BorderBrush="Black"
                 BorderThickness="2"
                 CornerRadius="8"
                 Height="100"
                 Padding="5">
             <StackPanel Orientation="Horizontal">
-                
                 <Border BorderBrush="DarkGray"
                         BorderThickness="1"
                         CornerRadius="8"
@@ -31,5 +30,15 @@
                 </Border>
             </StackPanel>
         </Border>
+
+        <StackPanel Spacing="5" Margin="0,20,0,0">
+            <TextBlock Text="{Binding StatusText}" 
+                       HorizontalAlignment="Left" 
+                       FontSize="16"/>
+            <Button Content="Run Test Terminal Command" 
+                    Command="{Binding RunTestCommand}"
+                    HorizontalAlignment="Left"/>
+        </StackPanel>
     </StackPanel>
+
 </UserControl>
